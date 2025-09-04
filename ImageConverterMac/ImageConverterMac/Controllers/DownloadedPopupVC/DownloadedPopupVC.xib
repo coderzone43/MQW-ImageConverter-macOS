@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DownloadedPopupVC" customModule="Image_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="lblPopupMsg" destination="inC-1p-SFB" id="Ysl-xD-kLs"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Bl6-Gs-iX3">
+                    <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+                    <view key="contentView" id="gg8-g1-XTA">
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CGI-cf-kS5">
+                                <rect key="frame" x="44" y="49" width="37" height="36"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgTickDownloaded" id="6C2-9b-cXQ"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="inC-1p-SFB">
+                                <rect key="frame" x="10" y="20" width="105" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Downloaded!" id="aJd-ol-Kvx">
+                                    <font key="font" metaFont="systemBold" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="inC-1p-SFB" firstAttribute="centerX" secondItem="gg8-g1-XTA" secondAttribute="centerX" id="08d-tb-yz5"/>
+                            <constraint firstItem="CGI-cf-kS5" firstAttribute="centerX" secondItem="gg8-g1-XTA" secondAttribute="centerX" id="Cnz-tq-XIh"/>
+                            <constraint firstItem="CGI-cf-kS5" firstAttribute="top" secondItem="gg8-g1-XTA" secondAttribute="top" constant="15" id="gqv-5X-Tgu"/>
+                            <constraint firstItem="inC-1p-SFB" firstAttribute="top" secondItem="CGI-cf-kS5" secondAttribute="bottom" constant="10" id="u6p-tl-DC1"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Ybs-Y5-wVT"/>
+                        <constraint firstAttribute="width" constant="125" id="jMe-Od-1aT"/>
+                    </constraints>
+                    <color key="fillColor" name="White1"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Bl6-Gs-iX3" secondAttribute="bottom" id="CsF-Q2-8o0"/>
+                <constraint firstItem="Bl6-Gs-iX3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="EO9-Wu-Nz6"/>
+                <constraint firstAttribute="trailing" secondItem="Bl6-Gs-iX3" secondAttribute="trailing" id="U0c-9c-VCu"/>
+                <constraint firstItem="Bl6-Gs-iX3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="zbs-Ql-bRv"/>
+            </constraints>
+            <point key="canvasLocation" x="139.5" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="imgTickDownloaded" width="37" height="36"/>
+        <namedColor name="White1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

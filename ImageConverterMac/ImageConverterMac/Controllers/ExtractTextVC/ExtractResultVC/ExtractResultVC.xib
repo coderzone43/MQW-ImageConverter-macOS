@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ExtractResultVC" customModule="Image_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDownloadAll" destination="KSV-lW-BOt" id="4zs-TD-Ak2"/>
+                <outlet property="collectionText" destination="qyX-Qi-wlx" id="umq-qD-YCh"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="800" height="700"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="GDE-1b-4Rb">
+                    <rect key="frame" x="0.0" y="650" width="800" height="50"/>
+                    <view key="contentView" id="YGw-E1-j9l">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="A4W-9Z-rcB">
+                                <rect key="frame" x="15" y="15" width="28" height="20"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="btnBack" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="jEe-O0-jOC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="HP6-EP-mR3"/>
+                                    <constraint firstAttribute="height" constant="20" id="zeh-mX-gc0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnBackAction:" target="-2" id="6sR-eL-tg9"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="pfw-EO-QnP">
+                                <rect key="frame" x="43" y="15" width="28" height="20"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="btnForward" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="acK-Xh-qYM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="4e7-HZ-IKh"/>
+                                    <constraint firstAttribute="height" constant="20" id="ZM8-r4-nsM"/>
+                                </constraints>
+                            </button>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dys-gC-yRb">
+                                <rect key="frame" x="79" y="16" width="90" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Extract Text" id="VfZ-uW-cpu">
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                    <color key="textColor" name="Black1"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="pfw-EO-QnP" firstAttribute="leading" secondItem="A4W-9Z-rcB" secondAttribute="trailing" id="2MU-Ol-EZq"/>
+                            <constraint firstItem="pfw-EO-QnP" firstAttribute="centerY" secondItem="A4W-9Z-rcB" secondAttribute="centerY" id="HYE-ZT-gJW"/>
+                            <constraint firstItem="Dys-gC-yRb" firstAttribute="leading" secondItem="pfw-EO-QnP" secondAttribute="trailing" constant="10" id="Vr4-JG-ueu"/>
+                            <constraint firstItem="Dys-gC-yRb" firstAttribute="centerY" secondItem="A4W-9Z-rcB" secondAttribute="centerY" id="Yy0-Z0-Vi7"/>
+                            <constraint firstItem="A4W-9Z-rcB" firstAttribute="centerY" secondItem="YGw-E1-j9l" secondAttribute="centerY" id="apQ-ow-LED"/>
+                            <constraint firstItem="A4W-9Z-rcB" firstAttribute="leading" secondItem="YGw-E1-j9l" secondAttribute="leading" constant="15" id="tUc-VP-THM"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Sff-lF-K4n"/>
+                    </constraints>
+                    <color key="fillColor" name="TitleBarColor"/>
+                </box>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Yy8-Oi-wkI">
+                    <rect key="frame" x="0.0" y="0.0" width="800" height="650"/>
+                    <view key="contentView" id="afC-Uw-Cqq">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcT-uH-PEX">
+                                <rect key="frame" x="25" y="0.0" width="750" height="650"/>
+                                <clipView key="contentView" drawsBackground="NO" id="45w-P8-kYI">
+                                    <rect key="frame" x="0.0" y="0.0" width="750" height="650"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="qyX-Qi-wlx">
+                                            <rect key="frame" x="0.0" y="0.0" width="750" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Nqz-8K-Uao">
+                                                <size key="itemSize" width="1" height="65"/>
+                                                <edgeInsets key="sectionInset" left="0.0" right="0.0" top="25" bottom="85"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="AppClearColor"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-2" id="G45-qc-mU1"/>
+                                                <outlet property="delegate" destination="-2" id="4TA-Xc-Si0"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="AppClearColor"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="O9C-C3-MD2">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="MQe-CX-fxf">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="KSV-lW-BOt">
+                                <rect key="frame" x="250" y="15" width="300" height="56"/>
+                                <buttonCell key="cell" type="bevel" title="Download All" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="LBT-Rq-ulF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="18"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="AppWhiteOnly"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="KMy-G7-81O"/>
+                                    <constraint firstAttribute="width" constant="300" id="z5g-r0-9Hh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="Primary1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnDownloadAllAction:" target="-2" id="3co-QW-0ZT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FcT-uH-PEX" firstAttribute="top" secondItem="afC-Uw-Cqq" secondAttribute="top" id="2pS-kh-ht0"/>
+                            <constraint firstItem="FcT-uH-PEX" firstAttribute="leading" secondItem="afC-Uw-Cqq" secondAttribute="leading" constant="25" id="KhR-fj-ekD"/>
+                            <constraint firstItem="KSV-lW-BOt" firstAttribute="centerX" secondItem="afC-Uw-Cqq" secondAttribute="centerX" id="RN5-hL-g2a"/>
+                            <constraint firstAttribute="trailing" secondItem="FcT-uH-PEX" secondAttribute="trailing" constant="25" id="dEH-DX-cxr"/>
+                            <constraint firstAttribute="bottom" secondItem="FcT-uH-PEX" secondAttribute="bottom" id="p0C-jX-pfH"/>
+                            <constraint firstAttribute="bottom" secondItem="KSV-lW-BOt" secondAttribute="bottom" constant="15" id="pYf-h6-iQw"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="White1"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Yy8-Oi-wkI" secondAttribute="bottom" id="0EE-vO-Xmf"/>
+                <constraint firstItem="Yy8-Oi-wkI" firstAttribute="top" secondItem="GDE-1b-4Rb" secondAttribute="bottom" id="8f7-J7-3YD"/>
+                <constraint firstItem="GDE-1b-4Rb" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Wtx-Rp-0Ri"/>
+                <constraint firstAttribute="trailing" secondItem="GDE-1b-4Rb" secondAttribute="trailing" id="h16-g5-oey"/>
+                <constraint firstItem="Yy8-Oi-wkI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="o29-w9-wIb"/>
+                <constraint firstAttribute="trailing" secondItem="Yy8-Oi-wkI" secondAttribute="trailing" id="vb2-0f-7n9"/>
+                <constraint firstItem="GDE-1b-4Rb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ylT-fN-Kro"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="btnBack" width="28" height="20"/>
+        <image name="btnForward" width="28" height="20"/>
+        <namedColor name="AppClearColor">
+            <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhiteOnly">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black1">
+            <color red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary1">
+            <color red="0.18431372549019609" green="0.5725490196078431" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleBarColor">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

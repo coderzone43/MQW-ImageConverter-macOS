@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x8L-Ye-RQM">
+                    <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="YU1-7C-VaV"/>
+                        <constraint firstAttribute="height" constant="165" id="wwd-je-yn0"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="EOJ-s1-NwP"/>
+                </imageView>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="ifE-mk-zt4">
+                    <rect key="frame" x="151" y="151" width="24" height="24"/>
+                    <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="btnRemoveImg" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="bk7-fw-WTP">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnRemoveAction:" target="sIu-uA-u9L" id="9eQ-Y9-Q9b"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ifE-mk-zt4" secondAttribute="trailing" id="HJt-XF-CGw"/>
+                <constraint firstItem="x8L-Ye-RQM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="Rkd-Y1-njS"/>
+                <constraint firstAttribute="trailing" secondItem="x8L-Ye-RQM" secondAttribute="trailing" constant="10" id="jYj-yv-kVY"/>
+                <constraint firstItem="ifE-mk-zt4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="n2H-qd-1D3"/>
+                <constraint firstAttribute="bottom" secondItem="x8L-Ye-RQM" secondAttribute="bottom" id="wQn-zz-TtH"/>
+                <constraint firstItem="x8L-Ye-RQM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="xW3-Qr-EFF"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="154"/>
+        </customView>
+        <customObject id="sIu-uA-u9L" customClass="ConvertZipCVC" customModule="Image_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="imgConvert" destination="x8L-Ye-RQM" id="dkD-FG-2ja"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="kbg-K7-EJh"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="btnRemoveImg" width="24" height="24"/>
+    </resources>
+</document>

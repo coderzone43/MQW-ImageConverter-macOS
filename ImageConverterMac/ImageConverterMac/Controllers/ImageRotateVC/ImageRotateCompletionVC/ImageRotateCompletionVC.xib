@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ImageRotateCompletionVC" customModule="Image_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="imgRotate" destination="F6o-Ma-ATW" id="ff8-GG-aN8"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Zkm-iT-NR9">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
+                    <view key="contentView" id="tPO-r5-fHe">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="eWe-sC-Jml">
+                                <rect key="frame" x="400" y="400" width="30" height="30"/>
+                                <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="btnClose" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="RR6-sR-m8m">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6eS-7e-vEc"/>
+                                    <constraint firstAttribute="width" constant="30" id="qNa-uu-Eb1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnCloseAction:" target="-2" id="Onb-Iy-Hwr"/>
+                                </connections>
+                            </button>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s8W-iP-Ppq">
+                                <rect key="frame" x="120" y="401" width="210" height="28"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Action Completed" id="sdT-wg-CQO">
+                                    <font key="font" metaFont="systemBold" size="24"/>
+                                    <color key="textColor" name="Black1"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t3k-w0-yxW">
+                                <rect key="frame" x="70" y="372" width="311" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Your file has been processed successfully" id="gd4-rC-1Fb">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="White6"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box boxType="custom" cornerRadius="15" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Rr1-54-R7A">
+                                <rect key="frame" x="125" y="125" width="200" height="200"/>
+                                <view key="contentView" id="UaE-dV-qd5">
+                                    <rect key="frame" x="1" y="1" width="198" height="198"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6o-Ma-ATW">
+                                            <rect key="frame" x="-1" y="-1" width="200" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="SQV-zR-0AY"/>
+                                                <constraint firstAttribute="width" constant="200" id="SUm-YR-yqD"/>
+                                            </constraints>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ydu-kj-dnZ"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="F6o-Ma-ATW" firstAttribute="centerY" secondItem="UaE-dV-qd5" secondAttribute="centerY" id="6gL-V5-hdB"/>
+                                        <constraint firstItem="F6o-Ma-ATW" firstAttribute="centerX" secondItem="UaE-dV-qd5" secondAttribute="centerX" id="CVg-px-Mb8"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="re8-S0-npQ"/>
+                                    <constraint firstAttribute="width" constant="200" id="yYw-NO-4MF"/>
+                                </constraints>
+                                <color key="borderColor" name="White3"/>
+                            </box>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="ocM-4h-Xuf">
+                                <rect key="frame" x="25" y="25" width="400" height="50"/>
+                                <buttonCell key="cell" type="bevel" title="Download" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="jw4-OP-Vap">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="AppWhiteOnly"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="4Ku-cA-Xke"/>
+                                    <constraint firstAttribute="height" constant="50" id="il5-Rm-F58"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="Primary1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnDownloadAction:" target="-2" id="4F5-he-b7C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eWe-sC-Jml" secondAttribute="trailing" constant="20" id="0Dc-0C-N8I"/>
+                            <constraint firstItem="eWe-sC-Jml" firstAttribute="top" secondItem="tPO-r5-fHe" secondAttribute="top" constant="20" id="24g-IW-v1z"/>
+                            <constraint firstItem="Rr1-54-R7A" firstAttribute="centerX" secondItem="tPO-r5-fHe" secondAttribute="centerX" id="2zg-gB-mwK"/>
+                            <constraint firstItem="Rr1-54-R7A" firstAttribute="centerY" secondItem="tPO-r5-fHe" secondAttribute="centerY" id="6Hv-He-HTe"/>
+                            <constraint firstAttribute="bottom" secondItem="ocM-4h-Xuf" secondAttribute="bottom" constant="25" id="Acn-vm-FOY"/>
+                            <constraint firstItem="t3k-w0-yxW" firstAttribute="top" secondItem="s8W-iP-Ppq" secondAttribute="bottom" constant="10" id="Bl5-4L-hTs"/>
+                            <constraint firstItem="t3k-w0-yxW" firstAttribute="centerX" secondItem="tPO-r5-fHe" secondAttribute="centerX" id="SZn-MN-oX4"/>
+                            <constraint firstItem="s8W-iP-Ppq" firstAttribute="centerY" secondItem="eWe-sC-Jml" secondAttribute="centerY" id="d6r-pp-vgI"/>
+                            <constraint firstItem="s8W-iP-Ppq" firstAttribute="centerX" secondItem="tPO-r5-fHe" secondAttribute="centerX" id="je7-02-F5d"/>
+                            <constraint firstItem="ocM-4h-Xuf" firstAttribute="centerX" secondItem="tPO-r5-fHe" secondAttribute="centerX" id="wOU-n2-hu0"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="XAx-bw-SPF"/>
+                        <constraint firstAttribute="width" constant="450" id="fwU-Rv-pHd"/>
+                    </constraints>
+                    <color key="fillColor" name="White1"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Zkm-iT-NR9" secondAttribute="bottom" id="9Dl-QY-CMk"/>
+                <constraint firstAttribute="trailing" secondItem="Zkm-iT-NR9" secondAttribute="trailing" id="Qst-wL-peu"/>
+                <constraint firstItem="Zkm-iT-NR9" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="W2k-CU-Whl"/>
+                <constraint firstItem="Zkm-iT-NR9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="uBW-pA-x3A"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="btnClose" width="24" height="25"/>
+        <namedColor name="AppWhiteOnly">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black1">
+            <color red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary1">
+            <color red="0.18431372549019609" green="0.5725490196078431" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White3">
+            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White6">
+            <color red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

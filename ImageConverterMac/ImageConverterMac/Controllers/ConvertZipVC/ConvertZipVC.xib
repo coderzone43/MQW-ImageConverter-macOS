@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ConvertZipVC" customModule="Image_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionConvert" destination="0u0-pd-jwx" id="T7Y-T5-VnL"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="1000" height="700"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="rRz-dR-HD8">
+                    <rect key="frame" x="0.0" y="650" width="1000" height="50"/>
+                    <view key="contentView" id="Ooi-Yu-Xs7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="I4x-WZ-uw5">
+                                <rect key="frame" x="15" y="15" width="28" height="20"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="btnBack" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Rfz-Rd-4gG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fFj-TN-Vm7"/>
+                                    <constraint firstAttribute="width" constant="28" id="yeR-CS-iD9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnBackAction:" target="-2" id="d9E-W6-d3J"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="EKE-PX-kVh">
+                                <rect key="frame" x="43" y="15" width="28" height="20"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="btnForward" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="w4A-MW-fKA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="h24-lU-nR5"/>
+                                    <constraint firstAttribute="height" constant="20" id="hXH-8w-wFN"/>
+                                </constraints>
+                            </button>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ye3-be-hjC">
+                                <rect key="frame" x="79" y="16" width="106" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Convert to Zip" id="hRY-R9-ss3">
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                    <color key="textColor" name="Black1"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="I4x-WZ-uw5" firstAttribute="leading" secondItem="Ooi-Yu-Xs7" secondAttribute="leading" constant="15" id="CVe-gS-dmD"/>
+                            <constraint firstItem="Ye3-be-hjC" firstAttribute="centerY" secondItem="I4x-WZ-uw5" secondAttribute="centerY" id="GKj-fb-2Au"/>
+                            <constraint firstItem="EKE-PX-kVh" firstAttribute="centerY" secondItem="I4x-WZ-uw5" secondAttribute="centerY" id="PeU-jg-rR6"/>
+                            <constraint firstItem="EKE-PX-kVh" firstAttribute="leading" secondItem="I4x-WZ-uw5" secondAttribute="trailing" id="QZm-xv-W60"/>
+                            <constraint firstItem="I4x-WZ-uw5" firstAttribute="centerY" secondItem="Ooi-Yu-Xs7" secondAttribute="centerY" id="n5M-pm-O8M"/>
+                            <constraint firstItem="Ye3-be-hjC" firstAttribute="leading" secondItem="EKE-PX-kVh" secondAttribute="trailing" constant="10" id="sgF-BE-peR"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ryI-xO-Bwv"/>
+                    </constraints>
+                    <color key="fillColor" name="TitleBarColor"/>
+                </box>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Eat-dJ-JJR">
+                    <rect key="frame" x="0.0" y="0.0" width="670" height="650"/>
+                    <view key="contentView" id="aFq-jw-z1H">
+                        <rect key="frame" x="0.0" y="0.0" width="670" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W0-eT-CIf">
+                                <rect key="frame" x="30" y="0.0" width="610" height="650"/>
+                                <clipView key="contentView" drawsBackground="NO" id="PPZ-1I-IdS">
+                                    <rect key="frame" x="0.0" y="0.0" width="610" height="650"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="0u0-pd-jwx">
+                                            <rect key="frame" x="0.0" y="0.0" width="610" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" id="bKW-YM-KDX">
+                                                <size key="itemSize" width="175" height="175"/>
+                                                <edgeInsets key="sectionInset" left="0.0" right="0.0" top="30" bottom="95"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="AppClearColor"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-2" id="d1S-7j-ZYo"/>
+                                                <outlet property="delegate" destination="-2" id="P5L-Ed-mcb"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="AppClearColor"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="rvn-LK-S9r">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="92m-uw-yS1">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="3X8-hd-DNj">
+                                <rect key="frame" x="590" y="20" width="60" height="60"/>
+                                <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="btnAddImg" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="w9t-KT-EfN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnAddAction:" target="-2" id="FuF-1q-sIO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1W0-eT-CIf" secondAttribute="bottom" id="5GF-Lj-tQp"/>
+                            <constraint firstItem="1W0-eT-CIf" firstAttribute="leading" secondItem="aFq-jw-z1H" secondAttribute="leading" constant="30" id="6Ol-iD-1G3"/>
+                            <constraint firstAttribute="bottom" secondItem="3X8-hd-DNj" secondAttribute="bottom" constant="20" id="Aut-px-NK3"/>
+                            <constraint firstAttribute="trailing" secondItem="3X8-hd-DNj" secondAttribute="trailing" constant="20" id="C0P-OP-LnR"/>
+                            <constraint firstItem="1W0-eT-CIf" firstAttribute="top" secondItem="aFq-jw-z1H" secondAttribute="top" id="S2B-Cs-9mB"/>
+                            <constraint firstAttribute="trailing" secondItem="1W0-eT-CIf" secondAttribute="trailing" constant="30" id="xAM-vX-e9z"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="White1"/>
+                </box>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-pC-0l3">
+                    <rect key="frame" x="670" y="0.0" width="330" height="650"/>
+                    <view key="contentView" id="z55-28-qPI">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hIL-ff-dQ8">
+                                <rect key="frame" x="100" y="609" width="130" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Convert to Zip" id="gnV-YO-Ymr">
+                                    <font key="font" metaFont="systemBold" size="18"/>
+                                    <color key="textColor" name="Black1"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Do-Fe-h9z">
+                                <rect key="frame" x="38" y="553" width="254" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Dk4-Oa-6rx"/>
+                                </constraints>
+                                <textFieldCell key="cell" alignment="center" title="Easily zip a single Image or multiple Images into one ZIP file, maintaining the original file quality" id="E58-Dp-30M">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="White6"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="GP8-fI-fYV">
+                                <rect key="frame" x="15" y="20" width="300" height="50"/>
+                                <buttonCell key="cell" type="bevel" title="Convert To Zip" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="eOS-h7-50N">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                </buttonCell>
+                                <color key="contentTintColor" name="AppWhiteOnly"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="67H-Fl-aX2"/>
+                                    <constraint firstAttribute="height" constant="50" id="Mfn-7z-qHn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="Primary1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnConvertAction:" target="-2" id="vl2-Kf-xgq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2Do-Fe-h9z" firstAttribute="centerX" secondItem="z55-28-qPI" secondAttribute="centerX" id="7i0-Ic-ZCO"/>
+                            <constraint firstItem="GP8-fI-fYV" firstAttribute="centerX" secondItem="z55-28-qPI" secondAttribute="centerX" id="Du1-yj-PGN"/>
+                            <constraint firstItem="hIL-ff-dQ8" firstAttribute="top" secondItem="z55-28-qPI" secondAttribute="top" constant="20" id="NpN-pz-hP5"/>
+                            <constraint firstItem="hIL-ff-dQ8" firstAttribute="centerX" secondItem="z55-28-qPI" secondAttribute="centerX" id="ZqV-gd-Zoe"/>
+                            <constraint firstAttribute="bottom" secondItem="GP8-fI-fYV" secondAttribute="bottom" constant="20" id="n5q-Dl-OCp"/>
+                            <constraint firstItem="2Do-Fe-h9z" firstAttribute="top" secondItem="hIL-ff-dQ8" secondAttribute="bottom" constant="5" id="zRi-dT-PSp"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="330" id="gb4-tC-x0r"/>
+                    </constraints>
+                    <color key="fillColor" name="White1"/>
+                </box>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="oQU-Dm-Wcq">
+                    <rect key="frame" x="670" y="0.0" width="1" height="650"/>
+                    <view key="contentView" id="rI5-TQ-b7K">
+                        <rect key="frame" x="0.0" y="0.0" width="1" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="2Ef-SG-MtN"/>
+                    </constraints>
+                    <color key="fillColor" name="White3"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hsP-pC-0l3" firstAttribute="leading" secondItem="Eat-dJ-JJR" secondAttribute="trailing" id="2XD-Gy-5YF"/>
+                <constraint firstItem="Eat-dJ-JJR" firstAttribute="top" secondItem="rRz-dR-HD8" secondAttribute="bottom" id="9Ng-h6-fhj"/>
+                <constraint firstItem="oQU-Dm-Wcq" firstAttribute="bottom" secondItem="hsP-pC-0l3" secondAttribute="bottom" id="HSW-tY-ipq"/>
+                <constraint firstAttribute="trailing" secondItem="hsP-pC-0l3" secondAttribute="trailing" id="K8f-9r-1Sr"/>
+                <constraint firstItem="rRz-dR-HD8" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="KcI-6J-Pyg"/>
+                <constraint firstItem="rRz-dR-HD8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="KrC-n0-Go6"/>
+                <constraint firstItem="oQU-Dm-Wcq" firstAttribute="top" secondItem="hsP-pC-0l3" secondAttribute="top" id="Nqu-ue-4Dt"/>
+                <constraint firstAttribute="bottom" secondItem="Eat-dJ-JJR" secondAttribute="bottom" id="VdH-8o-ugi"/>
+                <constraint firstAttribute="bottom" secondItem="hsP-pC-0l3" secondAttribute="bottom" id="X4i-nf-qJ9"/>
+                <constraint firstAttribute="trailing" secondItem="rRz-dR-HD8" secondAttribute="trailing" id="bgv-nu-Uyb"/>
+                <constraint firstItem="Eat-dJ-JJR" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="f7q-Wb-rNV"/>
+                <constraint firstItem="hsP-pC-0l3" firstAttribute="top" secondItem="rRz-dR-HD8" secondAttribute="bottom" id="ioP-fh-yrX"/>
+                <constraint firstItem="oQU-Dm-Wcq" firstAttribute="leading" secondItem="hsP-pC-0l3" secondAttribute="leading" id="t4g-zJ-wwh"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="btnAddImg" width="60" height="60"/>
+        <image name="btnBack" width="28" height="20"/>
+        <image name="btnForward" width="28" height="20"/>
+        <namedColor name="AppClearColor">
+            <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhiteOnly">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black1">
+            <color red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary1">
+            <color red="0.18431372549019609" green="0.5725490196078431" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleBarColor">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White3">
+            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White6">
+            <color red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
