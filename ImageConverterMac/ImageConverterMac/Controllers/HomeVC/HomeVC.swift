@@ -33,6 +33,7 @@ class HomeVC: NSViewController {
     @IBOutlet weak var btnWebp: NSButton!
     @IBOutlet weak var btnPDF: NSButton!
     @IBOutlet weak var btnTools: NSButton!
+    @IBOutlet weak var btnOffer: NSButton!
     
     var arrHome = homeDecodeJSON() ?? []
     var arrSearch: [homeObj] = []
@@ -121,6 +122,11 @@ class HomeVC: NSViewController {
     }
     
     func checkRatingAndPro(){
+        if isPremiumUser(){
+            btnOffer.isHidden = true
+        }else{
+            btnOffer.isHidden = false
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if Utility.isNetworkAvailable() {
                 if Utility.incrementLaunchCountAndCheck() {
@@ -314,6 +320,8 @@ class HomeVC: NSViewController {
         
         selectedConversionType = .tools // No filter, show all types
         filterHistoryByType(.tools)
+    }
+    @IBAction func btnOfferAction(_ sender: Any) {
     }
     
     //MARK: API Methods
@@ -557,6 +565,15 @@ extension HomeVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCollecti
             self.presentAsSheet(vc)
         } else {
             collectionView.deselectItems(at: indexPaths)
+            
+            if history[index.item].fileExtension == "zip"{
+                //Do Nothing
+            }else{
+                //Show preview
+                if let url = URL(string: "file://\(history[index.item].path)"){
+                    QuickLookPreview.shared.preview(file: url)
+                }
+            }
         }
     }
     

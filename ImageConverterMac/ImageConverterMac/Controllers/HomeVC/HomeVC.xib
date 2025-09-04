@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="btnAll" destination="TlS-eQ-HTH" id="zY4-od-nqD"/>
                 <outlet property="btnJPG" destination="3nI-Kh-oDl" id="dNn-Dh-8S8"/>
+                <outlet property="btnOffer" destination="c2j-3v-8ep" id="2st-K6-ysp"/>
                 <outlet property="btnPDF" destination="9uE-c2-DcJ" id="DCX-7n-3UY"/>
                 <outlet property="btnPNG" destination="7gd-uQ-0ww" id="mXM-5g-pkL"/>
                 <outlet property="btnTools" destination="kqn-ER-YIt" id="6xE-jF-bkl"/>
@@ -408,6 +409,16 @@
                     </view>
                     <color key="fillColor" name="White1"/>
                 </box>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="c2j-3v-8ep">
+                    <rect key="frame" x="852" y="20" width="158" height="134"/>
+                    <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="btnOffer" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Gbf-5d-eTp">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnOfferAction:" target="-2" id="Htq-Yn-AnV"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="X0N-6q-gfB" firstAttribute="bottom" secondItem="2Fh-7O-tmO" secondAttribute="bottom" id="8tk-mc-t8Z"/>
@@ -415,15 +426,18 @@
                 <constraint firstAttribute="bottom" secondItem="2Fh-7O-tmO" secondAttribute="bottom" id="cTX-Kn-aqs"/>
                 <constraint firstItem="X0N-6q-gfB" firstAttribute="top" secondItem="2Fh-7O-tmO" secondAttribute="top" id="cfy-tp-6ti"/>
                 <constraint firstItem="2Fh-7O-tmO" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="dg6-GL-mJA"/>
+                <constraint firstAttribute="trailing" secondItem="c2j-3v-8ep" secondAttribute="trailing" constant="15" id="e3w-v4-IYe"/>
                 <constraint firstItem="X0N-6q-gfB" firstAttribute="leading" secondItem="2Fh-7O-tmO" secondAttribute="leading" id="fSr-Wn-YYz"/>
                 <constraint firstItem="X0N-6q-gfB" firstAttribute="trailing" secondItem="2Fh-7O-tmO" secondAttribute="trailing" id="pHC-Ig-fd4"/>
                 <constraint firstAttribute="trailing" secondItem="2Fh-7O-tmO" secondAttribute="trailing" id="piB-V6-w8j"/>
+                <constraint firstAttribute="bottom" secondItem="c2j-3v-8ep" secondAttribute="bottom" constant="20" id="pp1-Xt-lcv"/>
             </constraints>
             <point key="canvasLocation" x="132" y="-72"/>
         </customView>
     </objects>
     <resources>
-        <image name="imgEmptyHistory" width="101" height="101.5"/>
+        <image name="btnOffer" width="158" height="134"/>
+        <image name="imgEmptyHistory" width="101" height="102"/>
         <image name="imgSearch" width="24" height="24"/>
         <namedColor name="AppClearColor">
             <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>

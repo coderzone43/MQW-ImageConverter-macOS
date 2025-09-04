@@ -285,7 +285,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CoderZone.ImageConverterMac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mqw.image.converter;
 				PRODUCT_NAME = "Image Converter";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageConverterMac/MBProgressHUD/ImageConverterMac-Bridging-Header.h";
@@ -314,7 +314,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CoderZone.ImageConverterMac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mqw.image.converter;
 				PRODUCT_NAME = "Image Converter";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageConverterMac/MBProgressHUD/ImageConverterMac-Bridging-Header.h";

@@ -18,13 +18,14 @@ let strNotificationsEnable = "strNotificationsEnable"
 let strViewModeSetFromApp = "strViewModeSetFromApp"
 
 // MARK: - Subscription
-var weeklySubscription = ""
-var monthlySubscription = ""
-var yearlySubscription = ""
+var weeklySubscription = "com.mqw.image.converter.weekly"
+var monthlySubscription = "com.mqw.image.converter.monthly"
+var yearlySubscription = "com.mqw.image.converter.yearly"
+var yearlyOfferSubscription = "com.mqw.image.converter.yearly.offer"
 
 // MARK: - Shared Secret for App
-let SharedSecret = ""
-let appID = ""
+let SharedSecret = "94c393942d104ecf807d9ca14104bd8b"
+let appID = "6751902822"
 
 let urlTerms = "https://sites.google.com/view/muhammadqasimwali/terms-of-use"
 let urlPrivacy = "https://sites.google.com/view/muhammadqasimwali/privacy-policy"

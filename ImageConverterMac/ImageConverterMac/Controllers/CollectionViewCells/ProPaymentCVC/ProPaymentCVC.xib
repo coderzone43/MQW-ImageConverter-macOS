@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="498" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" cornerRadius="15" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="xQR-ng-jLl">
+                    <rect key="frame" x="0.0" y="0.0" width="498" height="75"/>
+                    <view key="contentView" id="BCX-Pq-Efg">
+                        <rect key="frame" x="1" y="1" width="496" height="73"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-P2-WBg">
+                                <rect key="frame" x="20" y="26" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="UMk-Fp-yD9"/>
+                                    <constraint firstAttribute="width" constant="22" id="lPQ-cx-Knh"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgRadio" id="y7B-xH-4sp"/>
+                            </imageView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zS5-Nq-aB2">
+                                <rect key="frame" x="55" y="44" width="24" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="---" id="U5b-Gy-8Bx">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="Black1"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2v6-pI-oIg">
+                                <rect key="frame" x="55" y="15" width="32" height="24"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="---" id="NNX-IZ-c7f">
+                                    <font key="font" metaFont="systemBold" size="20"/>
+                                    <color key="textColor" name="Black1"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LSh-9K-MxQ">
+                                <rect key="frame" x="88" y="19" width="22" height="15"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="---" id="XgQ-WQ-t1t">
+                                    <font key="font" metaFont="systemMedium" size="12"/>
+                                    <color key="textColor" name="White6"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box boxType="custom" borderType="none" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-iG-sZ9">
+                                <rect key="frame" x="391" y="19" width="85" height="35"/>
+                                <view key="contentView" id="iLE-i8-pPa">
+                                    <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wXX-Df-Bim">
+                                            <rect key="frame" x="8" y="9" width="69" height="17"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Free Trial" id="otb-e7-4m7">
+                                                <font key="font" metaFont="systemBold" size="14"/>
+                                                <color key="textColor" name="AppClearColor"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wXX-Df-Bim" firstAttribute="centerY" secondItem="iLE-i8-pPa" secondAttribute="centerY" id="JMK-9h-iA7"/>
+                                        <constraint firstAttribute="trailing" secondItem="wXX-Df-Bim" secondAttribute="trailing" constant="10" id="adN-gA-G4B"/>
+                                        <constraint firstItem="wXX-Df-Bim" firstAttribute="leading" secondItem="iLE-i8-pPa" secondAttribute="leading" constant="10" id="q8d-So-syu"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="a3W-ge-hrH"/>
+                                </constraints>
+                                <color key="fillColor" name="AppClearColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zS5-Nq-aB2" firstAttribute="leading" secondItem="2v6-pI-oIg" secondAttribute="leading" id="36F-QT-a3r"/>
+                            <constraint firstItem="S4B-P2-WBg" firstAttribute="centerY" secondItem="BCX-Pq-Efg" secondAttribute="centerY" id="3vG-9y-Cpj"/>
+                            <constraint firstItem="2v6-pI-oIg" firstAttribute="top" secondItem="zS5-Nq-aB2" secondAttribute="bottom" constant="5" id="CKt-3A-0fm"/>
+                            <constraint firstItem="LSh-9K-MxQ" firstAttribute="leading" secondItem="2v6-pI-oIg" secondAttribute="trailing" constant="5" id="H22-Ku-T7P"/>
+                            <constraint firstAttribute="trailing" secondItem="xwf-iG-sZ9" secondAttribute="trailing" constant="20" id="Tgo-Nw-A4o"/>
+                            <constraint firstItem="zS5-Nq-aB2" firstAttribute="top" secondItem="BCX-Pq-Efg" secondAttribute="top" constant="12" id="U3h-lG-1Wp"/>
+                            <constraint firstItem="2v6-pI-oIg" firstAttribute="centerY" secondItem="LSh-9K-MxQ" secondAttribute="centerY" constant="-1" id="VbL-M8-RBZ"/>
+                            <constraint firstItem="xwf-iG-sZ9" firstAttribute="centerY" secondItem="BCX-Pq-Efg" secondAttribute="centerY" id="gPY-pS-HfX"/>
+                            <constraint firstItem="S4B-P2-WBg" firstAttribute="leading" secondItem="BCX-Pq-Efg" secondAttribute="leading" constant="20" id="hbW-Pc-IyX"/>
+                            <constraint firstItem="zS5-Nq-aB2" firstAttribute="leading" secondItem="S4B-P2-WBg" secondAttribute="trailing" constant="15" id="r6U-IB-dN0"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="e2g-6U-nqX"/>
+                        <constraint firstAttribute="width" constant="498" id="wab-EG-RkG"/>
+                    </constraints>
+                    <color key="borderColor" name="White3"/>
+                    <color key="fillColor" name="White1"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xQR-ng-jLl" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="3TA-Lo-8zu"/>
+                <constraint firstItem="xQR-ng-jLl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="JkD-hw-hAE"/>
+                <constraint firstAttribute="bottom" secondItem="xQR-ng-jLl" secondAttribute="bottom" id="e4e-1d-Bee"/>
+                <constraint firstAttribute="trailing" secondItem="xQR-ng-jLl" secondAttribute="trailing" id="nCs-es-cSR"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="153.5"/>
+        </customView>
+        <customObject id="fTI-RD-nlA" customClass="ProPaymentCVC" customModule="Image_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="imgRadio" destination="S4B-P2-WBg" id="s5B-OH-idV"/>
+                <outlet property="lblPackageName" destination="zS5-Nq-aB2" id="Ngg-cq-bii"/>
+                <outlet property="lblPerDayPrice" destination="LSh-9K-MxQ" id="Ab7-qo-lLa"/>
+                <outlet property="lblPrice" destination="2v6-pI-oIg" id="vqs-95-pdY"/>
+                <outlet property="lblSave" destination="wXX-Df-Bim" id="miX-cn-6Tf"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="yuQ-NU-Bgc"/>
+                <outlet property="viewContainer" destination="xQR-ng-jLl" id="q9S-mS-t6C"/>
+                <outlet property="viewSave" destination="xwf-iG-sZ9" id="Yih-79-Nsv"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="imgRadio" width="22" height="22"/>
+        <namedColor name="AppClearColor">
+            <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black1">
+            <color red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White3">
+            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White6">
+            <color red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
