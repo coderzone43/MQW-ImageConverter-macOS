@@ -75,6 +75,23 @@ class ImageCropVC: NSViewController {
         
         // Load image (example)
         imgCrop.image = NSImage(contentsOf: selectedImageURL)
+        
+        if let image = NSImage(contentsOf: selectedImageURL) {
+            let boxBounds = viewContainer.bounds
+                let imageSize = image.size
+                
+                let scale = min(boxBounds.width / imageSize.width,
+                                boxBounds.height / imageSize.height,
+                                1.0) // don’t scale up, only shrink
+                
+                let newWidth = imageSize.width * scale
+                let newHeight = imageSize.height * scale
+                
+                let x = (boxBounds.width - newWidth) / 2
+                let y = (boxBounds.height - newHeight) / 2
+                
+            imgCrop.frame = NSRect(x: x, y: y, width: newWidth, height: newHeight)
+        }
         //imageCropperView.image = image
     }
     

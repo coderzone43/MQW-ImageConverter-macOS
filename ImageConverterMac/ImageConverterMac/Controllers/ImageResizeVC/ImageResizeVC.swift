@@ -73,6 +73,8 @@ class ImageResizeVC: NSViewController {
     
     //MARK: Setup View
     func setupView() {
+        tfWidth.formatter = NumberRangeFormatter()
+        tfHeight.formatter = NumberRangeFormatter()
         if let image = NSImage(contentsOf: selectedImageURL) {
             // Get the image dimensions (width and height)
             let imageSize = image.size

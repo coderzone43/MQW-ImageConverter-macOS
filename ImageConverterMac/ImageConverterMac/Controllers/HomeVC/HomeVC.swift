@@ -63,7 +63,7 @@ class HomeVC: NSViewController {
         checkRatingAndPro()
         tfSearch.focusRingType = .none
         tfSearchHistory.focusRingType = .none
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.checkPremium), name: .PremiumPurchasedSuccessed, object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(textDidChange(_:)),
                                                name: NSControl.textDidChangeNotification,
@@ -83,6 +83,15 @@ class HomeVC: NSViewController {
     }
     
     //MARK: Utility Methods
+    
+    @objc func checkPremium() {
+        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+            guard let self = self else { return }
+            if isPremiumUser() {
+                btnOffer.isHidden = true
+            }
+        }
+    }
     
     func initialButtonsState(){
         btnAll.contentTintColor = .appWhiteOnly
@@ -322,6 +331,8 @@ class HomeVC: NSViewController {
         filterHistoryByType(.tools)
     }
     @IBAction func btnOfferAction(_ sender: Any) {
+        let vc = OfferVC()
+        self.presentAsSheet(vc)
     }
     
     //MARK: API Methods
@@ -483,8 +494,8 @@ extension HomeVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCollecti
                 }else if history[indexPath.item].fileExtension == "txt"{
                     cell.imgFile.image = NSImage(resource: ImageResource.imgHistoryTxt)
                 }else{
-                    let result = ThumbnailGenerator.generateThumbnailWithName(for: url, size: NSSize(width: 160, height: 160))
-                    cell.imgFile.image = result.image
+                    let result = HomeVC.generateImageThumbnail(for: url, size: NSSize(width: 160, height: 160))
+                    cell.imgFile.image = result
                 }
             }
             
@@ -594,6 +605,32 @@ extension HomeVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCollecti
     }
 }
 extension HomeVC:Shareable{
+    private static func generateImageThumbnail(for url: URL, size: NSSize) -> NSImage? {
+        guard let image = NSImage(contentsOf: url) else { return nil }
+
+        let originalSize = image.size
+
+        // Calculate scale factor to fit in size (preserve aspect ratio)
+        let widthRatio  = size.width / originalSize.width
+        let heightRatio = size.height / originalSize.height
+        let scaleFactor = min(widthRatio, heightRatio) // fit inside box
+
+        let newSize = NSSize(width: originalSize.width * scaleFactor,
+                             height: originalSize.height * scaleFactor)
+
+        // Center the image in a fixed canvas (size × size)
+        let thumbnail = NSImage(size: size)
+        thumbnail.lockFocus()
+        let x = (size.width - newSize.width) / 2
+        let y = (size.height - newSize.height) / 2
+        image.draw(in: NSRect(x: x, y: y, width: newSize.width, height: newSize.height),
+                   from: .zero,
+                   operation: .copy,
+                   fraction: 1.0)
+        thumbnail.unlockFocus()
+
+        return thumbnail
+    }
     func showOptionsMenu(for indexPath: IndexPath) {
         selectedIndexPath = indexPath
         let menu = NSMenu()

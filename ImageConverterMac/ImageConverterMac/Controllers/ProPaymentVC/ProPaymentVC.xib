@@ -58,7 +58,7 @@
                                                 <action selector="btnCloseAction:" target="-2" id="hlv-jE-UCT"/>
                                             </connections>
                                         </button>
-                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QOM-aI-t4F">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QOM-aI-t4F">
                                             <rect key="frame" x="23" y="645" width="268" height="40"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Image Converter" id="rZe-4K-PtX">
                                                 <font key="font" metaFont="systemBold" size="34"/>
@@ -69,7 +69,7 @@
                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="C74-Nx-5GE">
                                             <rect key="frame" x="299" y="643" width="96" height="45"/>
                                             <subviews>
-                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZVO-2W-c9b">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZVO-2W-c9b">
                                                     <rect key="frame" x="8" y="2" width="80" height="40"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="PRO" id="nkk-Ic-kV2">
                                                         <font key="font" metaFont="systemHeavy" size="34"/>
@@ -93,7 +93,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
-                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1QS-Hb-bD4">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1QS-Hb-bD4">
                                             <rect key="frame" x="23" y="611" width="434" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Upgrade to Premium for exclusive access &amp; advanced tools" id="gBG-bO-WxF">
                                                 <font key="font" metaFont="system" size="16"/>
@@ -121,7 +121,7 @@
                                                                         </constraints>
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgProBullet1" id="2XZ-02-aGm"/>
                                                                     </imageView>
-                                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Ch-dg-ntR">
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Ch-dg-ntR">
                                                                         <rect key="frame" x="60" y="17" width="160" height="17"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Unlimited Conversions" id="RE8-nJ-n5f">
                                                                             <font key="font" metaFont="systemBold" size="14"/>
@@ -153,7 +153,7 @@
                                                                         </constraints>
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgProBullet2" id="JYx-5o-sJU"/>
                                                                     </imageView>
-                                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ipL-tl-RAc">
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ipL-tl-RAc">
                                                                         <rect key="frame" x="60" y="17" width="152" height="17"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Access to all Formats" id="0ve-qQ-vvM">
                                                                             <font key="font" metaFont="systemBold" size="14"/>
@@ -204,7 +204,7 @@
                                                                         </constraints>
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgProBullet3" id="0IL-wE-VeB"/>
                                                                     </imageView>
-                                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Vg-Ru-TuQ">
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Vg-Ru-TuQ">
                                                                         <rect key="frame" x="61" y="17" width="154" height="17"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Convert Multiple Files" id="YTJ-kN-ZyW">
                                                                             <font key="font" metaFont="systemBold" size="14"/>
@@ -236,7 +236,7 @@
                                                                         </constraints>
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgProBullet4" id="Fh6-kx-a5t"/>
                                                                     </imageView>
-                                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-IG-yqd">
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-IG-yqd">
                                                                         <rect key="frame" x="60" y="17" width="145" height="17"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Ads Free Experience" id="0XP-t9-MGP">
                                                                             <font key="font" metaFont="systemBold" size="14"/>
@@ -336,7 +336,7 @@
                                             </constraints>
                                             <color key="fillColor" name="White2"/>
                                         </box>
-                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="coE-UD-f9O">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="coE-UD-f9O">
                                             <rect key="frame" x="130" y="157" width="289" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="3 Days Free Trial, then $45.99 per month" id="gwV-bT-vQm">
                                                 <font key="font" metaFont="system" size="15"/>
@@ -367,7 +367,7 @@
                                                 <action selector="btnContinueAction:" target="-2" id="WVn-dO-Bdu"/>
                                             </connections>
                                         </button>
-                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lcb-li-N9g">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lcb-li-N9g">
                                             <rect key="frame" x="171" y="60" width="206" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Auto renewable, cancel anytime" id="pS0-2e-8zr">
                                                 <font key="font" metaFont="systemMedium" size="13"/>

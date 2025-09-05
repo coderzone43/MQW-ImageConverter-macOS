@@ -44,7 +44,7 @@ class UploadFileVC: NSViewController {
                 viewDragDrop.acceptedFileExtensions = ["jpeg", "png", "svg", "jpg", "gif"]
             }
             if browsedFileType == .crop{
-                viewDragDrop.acceptedFileExtensions = ["jpeg", "png", "gif", "jpg"]
+                viewDragDrop.acceptedFileExtensions = ["jpeg", "png", "svg", "jpg"]
             }
         }else{
             switch browsedFileType {
@@ -134,7 +134,7 @@ class UploadFileVC: NSViewController {
                 dialog.allowedContentTypes = [.jpeg, .png, .svg, .gif]
             }
             if browsedFileType == .crop{
-                dialog.allowedContentTypes = [.jpeg, .png, .gif]
+                dialog.allowedContentTypes = [.jpeg, .png, .svg]
             }
         }else{
             dialog.allowsMultipleSelection = true

@@ -104,17 +104,12 @@
                                     <rect key="frame" x="1" y="1" width="498" height="498"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ifH-GT-iH3">
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifH-GT-iH3">
                                             <rect key="frame" x="0.0" y="0.0" width="498" height="498"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="M6E-0K-Cpf"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="ifH-GT-iH3" secondAttribute="bottom" id="AQq-DS-QYr"/>
-                                        <constraint firstItem="ifH-GT-iH3" firstAttribute="leading" secondItem="cVK-OA-vP4" secondAttribute="leading" id="Jdk-Il-w4p"/>
-                                        <constraint firstItem="ifH-GT-iH3" firstAttribute="top" secondItem="cVK-OA-vP4" secondAttribute="top" id="sQd-6V-kPI"/>
-                                        <constraint firstAttribute="trailing" secondItem="ifH-GT-iH3" secondAttribute="trailing" id="xeG-km-c24"/>
-                                    </constraints>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="DCe-B3-XOC"/>
@@ -150,7 +145,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="QN3-pM-C6H"/>
                                 </constraints>
-                                <textFieldCell key="cell" alignment="center" title="Crop JPG, PNG, or GIF by selecting a predefined aspect ratio or defining a custom rectangle in pixels." id="deY-YM-KtI">
+                                <textFieldCell key="cell" alignment="center" title="Crop JPG, PNG, or SVG by selecting a predefined aspect ratio or defining a custom rectangle in pixels." id="deY-YM-KtI">
                                     <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="White6"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -559,8 +554,8 @@
         </customView>
     </objects>
     <resources>
-        <image name="btnBack" width="28" height="20"/>
-        <image name="btnForward" width="28" height="20"/>
+        <image name="btnBack" width="27.5" height="20"/>
+        <image name="btnForward" width="27.5" height="20"/>
         <image name="img16:9" width="36" height="36"/>
         <image name="img1:1" width="36" height="36"/>
         <image name="img1:2" width="36" height="36"/>

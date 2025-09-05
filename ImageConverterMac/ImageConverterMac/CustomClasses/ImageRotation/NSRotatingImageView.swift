@@ -18,24 +18,37 @@ class NSRotatingImageView: NSImageView {
     }
     
     override func draw(_ dirtyRect: NSRect) {
-            guard let image = image else { return }
-            
-            let ctx = NSGraphicsContext.current?.cgContext
-            let bounds = self.bounds
-            
-            ctx?.saveGState()
-            
-            // move origin to center of the view
-            ctx?.translateBy(x: bounds.midX, y: bounds.midY)
-            ctx?.rotate(by: rotationAngle * (.pi / 180))
-            
-            // after rotating, draw the image stretched to fill bounds
-            let drawRect = CGRect(x: -bounds.width / 2,
-                                  y: -bounds.height / 2,
-                                  width: bounds.width,
-                                  height: bounds.height)
-            image.draw(in: drawRect)
-            
-            ctx?.restoreGState()
-        }
+        guard let image = image else { return }
+        guard let ctx = NSGraphicsContext.current?.cgContext else { return }
+        
+        let bounds = self.bounds
+        let imageSize = image.size
+        
+        ctx.saveGState()
+        
+        // Move origin to center of the view
+        ctx.translateBy(x: bounds.midX, y: bounds.midY)
+        ctx.rotate(by: rotationAngle * (.pi / 180))
+        
+        // 🔹 Calculate aspect fit rect
+        let scale = min(bounds.width / imageSize.width,
+                        bounds.height / imageSize.height)
+        
+        let drawWidth = imageSize.width * scale
+        let drawHeight = imageSize.height * scale
+        
+        let drawRect = CGRect(x: -drawWidth / 2,
+                              y: -drawHeight / 2,
+                              width: drawWidth,
+                              height: drawHeight)
+        
+        image.draw(in: drawRect,
+                   from: .zero,
+                   operation: .sourceOver,
+                   fraction: 1.0,
+                   respectFlipped: true,
+                   hints: nil)
+        
+        ctx.restoreGState()
+    }
 }

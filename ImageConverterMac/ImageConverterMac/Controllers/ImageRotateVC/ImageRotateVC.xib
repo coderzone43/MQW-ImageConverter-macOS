@@ -93,7 +93,7 @@
                                                 <constraint firstAttribute="height" constant="500" id="0NP-fa-Zop"/>
                                                 <constraint firstAttribute="width" constant="500" id="LKV-cy-2lF"/>
                                             </constraints>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="gIZ-qt-EXT"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" id="gIZ-qt-EXT"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -378,8 +378,8 @@
         </customView>
     </objects>
     <resources>
-        <image name="btnBack" width="28" height="20"/>
-        <image name="btnForward" width="28" height="20"/>
+        <image name="btnBack" width="27.5" height="20"/>
+        <image name="btnForward" width="27.5" height="20"/>
         <image name="imgFlipH" width="36" height="36"/>
         <image name="imgFlipV" width="36" height="36"/>
         <image name="imgRotate" width="36" height="36"/>

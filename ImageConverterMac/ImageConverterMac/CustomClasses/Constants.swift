@@ -9,6 +9,7 @@ import Foundation
 import AppKit
 
 let appName = "Image Converter"
+let strCurrentTimeForOfferScreen = "strCurrentTimeForOfferScreen"
 
 let keyLaunchCount = "keyLaunchCount"
 let strRating = "strRating"

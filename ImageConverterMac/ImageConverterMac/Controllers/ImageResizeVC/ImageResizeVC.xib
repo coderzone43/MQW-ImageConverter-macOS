@@ -496,7 +496,7 @@
                                             </customSpacing>
                                         </stackView>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UxU-4o-cJL">
-                                            <rect key="frame" x="-2" y="219" width="145" height="18"/>
+                                            <rect key="frame" x="-2" y="219.5" width="145" height="18"/>
                                             <buttonCell key="cell" type="check" title="Maintain aspect ratio" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qdJ-Qq-oqD">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="cellTitle"/>
@@ -736,8 +736,8 @@
         </customView>
     </objects>
     <resources>
-        <image name="btnBack" width="28" height="20"/>
-        <image name="btnForward" width="28" height="20"/>
+        <image name="btnBack" width="27.5" height="20"/>
+        <image name="btnForward" width="27.5" height="20"/>
         <image name="imgArrow" width="16" height="16"/>
         <image name="imgDropArrow" width="20" height="20"/>
         <namedColor name="AppClearColor">

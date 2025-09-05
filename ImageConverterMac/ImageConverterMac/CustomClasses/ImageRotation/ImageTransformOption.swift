@@ -43,19 +43,25 @@ class ImageTransformer {
                                        flipH: Bool,
                                        flipV: Bool) -> NSImage? {
         
-        let imageSize = image.size
+        let originalSize = image.size
         let radians = angle * (.pi / 180)
         
-        let newImage = NSImage(size: imageSize)
-        newImage.lockFocus()
+        // 🔹 Compute rotated bounding box
+        let rotatedWidth = abs(originalSize.width * cos(radians)) + abs(originalSize.height * sin(radians))
+        let rotatedHeight = abs(originalSize.width * sin(radians)) + abs(originalSize.height * cos(radians))
+        let newSize = NSSize(width: rotatedWidth, height: rotatedHeight)
         
+        let newImage = NSImage(size: newSize)
+        newImage.lockFocus()
         guard let ctx = NSGraphicsContext.current?.cgContext else {
             newImage.unlockFocus()
             return nil
         }
         
-        // Move origin to image center
-        ctx.translateBy(x: imageSize.width / 2, y: imageSize.height / 2)
+        ctx.saveGState()
+        
+        // Move origin to center of new canvas
+        ctx.translateBy(x: newSize.width / 2, y: newSize.height / 2)
         ctx.rotate(by: radians)
         
         // Flip handling
@@ -64,17 +70,24 @@ class ImageTransformer {
         if flipV { transform = transform.scaledBy(x: 1, y: -1) }
         ctx.concatenate(transform)
         
-        // ✅ Draw full image, no scaling, no canvas change
-        image.draw(in: NSRect(x: -imageSize.width / 2,
-                              y: -imageSize.height / 2,
-                              width: imageSize.width,
-                              height: imageSize.height),
+        // Draw original image centered
+        let drawRect = CGRect(x: -originalSize.width / 2,
+                              y: -originalSize.height / 2,
+                              width: originalSize.width,
+                              height: originalSize.height)
+        
+        image.draw(in: drawRect,
                    from: .zero,
                    operation: .copy,
-                   fraction: 1.0)
+                   fraction: 1.0,
+                   respectFlipped: true,
+                   hints: nil)
+        
+        ctx.restoreGState()
         
         newImage.unlockFocus()
         return newImage
     }
 }
+
 
