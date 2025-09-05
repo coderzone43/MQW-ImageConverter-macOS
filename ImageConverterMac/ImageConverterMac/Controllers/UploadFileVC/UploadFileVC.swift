@@ -18,6 +18,7 @@ class UploadFileVC: NSViewController {
     var browsedFileType:ItemType = .PNG
     var isTool = false
     var fileURL: (([URL]) -> Void)?
+    weak var delegate: DelegateHomeCollectionSelectable?
     
     //MARK: View Life Cycle Start here...
     override func viewDidLoad() {
@@ -112,6 +113,7 @@ class UploadFileVC: NSViewController {
     
     //MARK: Button Action
     @IBAction func btnCloseAction(_ sender: Any) {
+        delegate?.seleclableCollectionView()
         dismiss(nil)
     }
     @IBAction func btnBrowseAction(_ sender: Any) {

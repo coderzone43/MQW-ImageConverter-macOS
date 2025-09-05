@@ -509,8 +509,8 @@ extension HomeVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCollecti
     
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         guard let index = indexPaths.first else{ return }
-        //collectionHome.isSelectable = false
         if collectionView == collectionHome{
+            collectionHome.isSelectable = false
             collectionView.deselectItems(at: indexPaths)
             let dataSource = isSearching ? arrSearch : arrHome
             let vc = UploadFileVC()
@@ -519,6 +519,7 @@ extension HomeVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCollecti
             if dataSource[index.section].conversionType == .tools {
                 vc.isTool = true
             }
+            vc.delegate = self
             vc.fileURL = { urls in
                 if dataSource[index.section].conversionType == .tools {
                     if dataSource[index.section].arr[index.item].type == .rotate {
@@ -915,6 +916,6 @@ extension HomeVC:SideBarControllerSelectionDelegate{
 }
 extension HomeVC : DelegateHomeCollectionSelectable{
     func seleclableCollectionView() {
-        //collectionHome.isSelectable = true
+        collectionHome.isSelectable = true
     }
 }
