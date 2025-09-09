@@ -104,6 +104,13 @@ class ImageCropVC: NSViewController {
     }
     
     @IBAction func btnCropAction(_ sender: Any) {
+        let count = Utility.getDefaultObject(forKey: strFreeHitsCount)
+        print("Free count is \(count)")
+        if !isPremiumUser() && Int(count)! > freeHitsIntValue{
+            let vc = ProPaymentVC()
+            self.presentAsSheet(vc)
+            return
+        }
         let vc = ImageRotateCompletionVC()
         if let croppedImage = imageCropperView.captureCroppedImage(from: imgCrop) {
             print("Image cropped successfully")
@@ -167,6 +174,7 @@ class ImageCropVC: NSViewController {
                                     
                                     // Add the file to history using HistoryManager
                                     HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                                    Utility.increaseFreeHitsCount()
                                     
                                     let oldURL = documentsDirectory.appendingPathComponent(sourceURL.lastPathComponent)
                                     

@@ -102,7 +102,13 @@ class ImageRotateVC: NSViewController {
         lblStraightenValue.stringValue = "\(Int(sender.doubleValue))"
     }
     @IBAction func btnDownloadAction(_ sender: Any) {
-        
+        let count = Utility.getDefaultObject(forKey: strFreeHitsCount)
+        print("Free count is \(count)")
+        if !isPremiumUser() && Int(count)! > freeHitsIntValue{
+            let vc = ProPaymentVC()
+            self.presentAsSheet(vc)
+            return
+        }
         let vc = ImageRotateCompletionVC()
         if let rotatedImage = self.getRotatedImage(from: self.imgSelected, angle: self.sliderStraighten.doubleValue) {
             vc.imgSelected = rotatedImage
@@ -165,6 +171,7 @@ class ImageRotateVC: NSViewController {
                                     
                                     // Add the file to history using HistoryManager
                                     HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                                    Utility.increaseFreeHitsCount()
                                     
                                     let oldURL = documentsDirectory.appendingPathComponent(sourceURL.lastPathComponent)
                                     

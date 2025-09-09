@@ -82,6 +82,13 @@ class ExtractTextVC: NSViewController {
     @IBAction func btnExtractAction(_ sender: Any) {
         
         if arrFiles.count > 0{
+            let count = Utility.getDefaultObject(forKey: strFreeHitsCount)
+            print("Free count is \(count)")
+            if !isPremiumUser() && Int(count)! > freeHitsIntValue{
+                let vc = ProPaymentVC()
+                self.presentAsSheet(vc)
+                return
+            }
             let cancelToken = CancellationToken()
             
             let loaderVC = ConversionProgressVC() //showConversionLoader()

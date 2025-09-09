@@ -40,7 +40,7 @@ let supportEmail = "muhammadqasimwali45@gmail.com"
 // MARK: - Premium User Constants
 let PREMIUM_USER = "PremiumUser"
 let LIFE_TIME_USER = "LifeTimeUser"
-let freeHitsIntValue:Int = 1
+let freeHitsIntValue:Int = 3
 
 /// Checks if the user is a premium user
 /// - Returns: A Boolean value indicating whether the user is premium or not

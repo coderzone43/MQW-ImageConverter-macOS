@@ -180,30 +180,32 @@ class HistoryManager {
         }
     }
     
-    func downloadFile(at index: Int) {
-        guard index >= 0 && index < downloadHistory.count else { return }
+    func downloadFile(historyID: String) {
+        guard let index = downloadHistory.firstIndex(where: { $0.historyID == historyID }) else {
+            return
+        }
         let fileInfo = downloadHistory[index]
         
-        // Create a URL from the file path
         let fileURL = URL(fileURLWithPath: fileInfo.path)
         
-        // Show Save Panel to let the user select a location
         let savePanel = NSSavePanel()
-        savePanel.nameFieldStringValue = fileInfo.name  // Default name in the save panel
+        savePanel.nameFieldStringValue = fileInfo.name
         
-        // Open the save panel
         savePanel.begin { response in
             if response == .OK, let destinationURL = savePanel.url {
                 do {
-                    // Copy the file to the selected location
+                    // ✅ If file exists (user pressed Replace), remove it first
+                    if FileManager.default.fileExists(atPath: destinationURL.path) {
+                        try FileManager.default.removeItem(at: destinationURL)
+                    }
+                    
+                    // ✅ Now copy
                     try FileManager.default.copyItem(at: fileURL, to: destinationURL)
                     print("✅ File saved at \(destinationURL.path)")
                     
-                    // Optionally, update your history to reflect the new location (if needed)
-                    // For example, you could add the file path to your history or perform other actions
                 } catch {
                     print("❌ Failed to save the file: \(error)")
-                    // Optionally, show an alert to the user if saving fails
+                    
                     let alert = NSAlert()
                     alert.messageText = "Save failed"
                     alert.informativeText = "There was an error saving the file."

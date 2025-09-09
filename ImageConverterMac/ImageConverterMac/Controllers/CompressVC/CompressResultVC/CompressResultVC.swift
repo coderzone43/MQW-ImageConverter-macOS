@@ -133,7 +133,7 @@ class CompressResultVC: NSViewController {
                                     
                                     // Add the file to history using HistoryManager
                                     HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
-                                    
+                                    Utility.increaseFreeHitsCount()
                                     let oldURL = documentsDirectory.appendingPathComponent(sourceURL.lastPathComponent)
                                     
                                     if FileManager.default.fileExists(atPath: oldURL.path) {
@@ -245,6 +245,7 @@ extension CompressResultVC: NSCollectionViewDelegate,NSCollectionViewDataSource,
                             
                             // Add the file to history using HistoryManager
                             HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                            Utility.increaseFreeHitsCount()
                             
                             let oldURL = documentsDirectory.appendingPathComponent(sourceURL.lastPathComponent)
                             

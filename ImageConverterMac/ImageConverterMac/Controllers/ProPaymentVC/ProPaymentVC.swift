@@ -131,7 +131,7 @@ extension ProPaymentVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCo
                 }
                 if indexPath.item == 1 {
                     cell.lblSave.stringValue = "Free Trial"
-                    cell.lblPerDayPrice.attributedStringValue = self.convertPricePerPlan(price: (Double(truncating: product.price)/30), product: product, plan: "/" + plans[0], isLifeTime: false, period: "Week")
+                    cell.lblPerDayPrice.attributedStringValue = self.convertPricePerPlan(price: (Double(truncating: product.price)/4), product: product, plan: "/" + plans[0], isLifeTime: false, period: "Week")
                 }
                 if indexPath.item == 2{
                     let discountInPercentage = self.getPercentageOffOnPlan(basePrice: Double(truncating: baseProduct.price), discountPrice: Double(truncating: product.price), for: plan)

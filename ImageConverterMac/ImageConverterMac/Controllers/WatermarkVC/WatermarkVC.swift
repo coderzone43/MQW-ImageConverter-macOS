@@ -265,6 +265,13 @@ class WatermarkVC: NSViewController {
         btnImage.contentTintColor = .appWhiteOnly
     }
     @IBAction func btnAddWatermarkAction(_ sender: Any) {
+        let count = Utility.getDefaultObject(forKey: strFreeHitsCount)
+        print("Free count is \(count)")
+        if !isPremiumUser() && Int(count)! > freeHitsIntValue{
+            let vc = ProPaymentVC()
+            self.presentAsSheet(vc)
+            return
+        }
         deselectAllSignatures()
         
         guard let imageWatermark = captureNSView(view: viewContainer, exportType: .SaveAsPNG) else {return}
@@ -328,6 +335,7 @@ class WatermarkVC: NSViewController {
                                 
                                 // Add the file to history using HistoryManager
                                 HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                                Utility.increaseFreeHitsCount()
                                 
                                 let oldURL = documentsDirectory.appendingPathComponent(sourceURL.lastPathComponent)
                                 

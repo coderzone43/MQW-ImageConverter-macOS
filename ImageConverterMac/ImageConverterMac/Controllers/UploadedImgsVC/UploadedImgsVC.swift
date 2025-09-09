@@ -179,6 +179,13 @@ class UploadedImgsVC: NSViewController {
     @IBAction func btnConvertAction(_ sender: Any) {
         if isConverting{
             if arrFiles.count > 0{
+                let count = Utility.getDefaultObject(forKey: strFreeHitsCount)
+                print("Free count is \(count)")
+                if !isPremiumUser() && Int(count)! > freeHitsIntValue{
+                    let vc = ProPaymentVC()
+                    self.presentAsSheet(vc)
+                    return
+                }
                 let cancelToken = CancellationToken()
                 
                 let loaderVC = ConversionProgressVC() //showConversionLoader()
@@ -309,6 +316,7 @@ extension UploadedImgsVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NS
                         
                         // Add the file to history using HistoryManager
                         HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                        Utility.increaseFreeHitsCount()
 
                     } catch {
                         print("❌ Failed to copy the file: \(error)")
@@ -383,6 +391,7 @@ extension UploadedImgsVC{
                                 
                                 // Add the file to history using HistoryManager
                                 HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                                Utility.increaseFreeHitsCount()
                             } catch {
                                 print("❌ Failed to copy the file: \(error)")
                                 // Optionally, show an alert to the user if copying fails

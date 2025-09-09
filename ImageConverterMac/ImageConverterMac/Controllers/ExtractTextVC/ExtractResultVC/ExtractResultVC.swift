@@ -150,6 +150,7 @@ class ExtractResultVC: NSViewController {
                                 
                                 // Add the file to history using HistoryManager
                                 HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                                Utility.increaseFreeHitsCount()
                                 
                                 let oldURL = documentsDirectory.appendingPathComponent(sourceURL.lastPathComponent)
                                 
@@ -264,6 +265,7 @@ extension ExtractResultVC: NSCollectionViewDelegate,NSCollectionViewDataSource,N
                                 
                                 // Add the file to history using HistoryManager
                                 HistoryManager.shared.addDownloadHistory(fileInfo: fileInfo)
+                                Utility.increaseFreeHitsCount()
                                 
                                 let oldURL = documentsDirectory.appendingPathComponent(sourceURL.lastPathComponent)
                                 

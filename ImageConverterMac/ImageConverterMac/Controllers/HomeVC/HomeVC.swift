@@ -510,8 +510,15 @@ extension HomeVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCollecti
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         guard let index = indexPaths.first else{ return }
         if collectionView == collectionHome{
-            collectionHome.isSelectable = false
             collectionView.deselectItems(at: indexPaths)
+            let count = Utility.getDefaultObject(forKey: strFreeHitsCount)
+            print("Free count is \(count)")
+            if !isPremiumUser() && Int(count)! > freeHitsIntValue{
+                let vc = ProPaymentVC()
+                self.presentAsSheet(vc)
+                return
+            }
+            collectionHome.isSelectable = false
             let dataSource = isSearching ? arrSearch : arrHome
             let vc = UploadFileVC()
             vc.convertedFileType = dataSource[index.section].conversionType
@@ -688,7 +695,7 @@ extension HomeVC:Shareable{
             let fileInfo = history[indexPath.item]
             // Add code to download the file
             print("Downloading \(fileInfo.name)")
-            HistoryManager.shared.downloadFile(at: indexPath.item)
+            HistoryManager.shared.downloadFile(historyID: fileInfo.historyID)
         }
     }
     
@@ -734,7 +741,8 @@ extension HomeVC:Shareable{
             alert.messageText = "Rename \(fileInfo.name)"
             alert.informativeText = "Enter a new name for the file."
             
-            let textField = NSTextField(string: fileInfo.name)
+            let name = (fileInfo.name as NSString).deletingPathExtension
+            let textField = NSTextField(string: name)
 
             // Set a preferred width (e.g. 300) and keep default height
             textField.frame = NSRect(x: 0, y: 0, width: 300, height: 24)
@@ -757,7 +765,7 @@ extension HomeVC:Shareable{
                     return
                 }
                 
-                HistoryManager.shared.renameFile(historyID: fileInfo.historyID, newName: newName) { result in
+                HistoryManager.shared.renameFile(historyID: fileInfo.historyID, newName: newName+"."+fileInfo.fileExtension) { result in
                     switch result {
                     case .success:
                         DispatchQueue.main.async {
