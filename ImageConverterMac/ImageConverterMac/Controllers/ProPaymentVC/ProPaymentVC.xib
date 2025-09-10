@@ -44,7 +44,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="548" height="710"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="X1p-iv-kdT">
+                                        <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X1p-iv-kdT">
                                             <rect key="frame" x="498" y="660" width="30" height="30"/>
                                             <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="btnClose" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="aXd-aR-BPZ">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="550" height="645"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="fqQ-rl-MFA">
+                            <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqQ-rl-MFA">
                                 <rect key="frame" x="500" y="595" width="30" height="30"/>
                                 <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="btnClose" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="NKS-22-8gT">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -324,8 +324,8 @@
         </customView>
     </objects>
     <resources>
-        <image name="btnClose" width="24" height="25"/>
-        <image name="imgOfferCrown" width="176" height="138"/>
+        <image name="btnClose" width="24" height="24.5"/>
+        <image name="imgOfferCrown" width="175.5" height="137.5"/>
         <namedColor name="AppClearColor">
             <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
