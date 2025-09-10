@@ -67,7 +67,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qy0-FN-cgF">
-                                <rect key="frame" x="140" y="324" width="270" height="24"/>
+                                <rect key="frame" x="140" y="313" width="270" height="24"/>
                                 <textFieldCell key="cell" alignment="center" title="Hurry up, the offer ends soon!" id="y8H-Kr-Qm8">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="Black1"/>
@@ -75,7 +75,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wZj-6V-3RT">
-                                <rect key="frame" x="227" y="271" width="97" height="43"/>
+                                <rect key="frame" x="227" y="260" width="97" height="43"/>
                                 <textFieldCell key="cell" alignment="center" title="-- : --" id="d7z-LZ-cRx">
                                     <font key="font" metaFont="systemBold" size="36"/>
                                     <color key="textColor" name="Primary1"/>
@@ -83,7 +83,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vFe-d8-inx">
-                                <rect key="frame" x="262" y="207" width="26" height="24"/>
+                                <rect key="frame" x="262" y="196" width="26" height="24"/>
                                 <textFieldCell key="cell" alignment="center" title="--" id="iW3-5a-DsF">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="Black1"/>
@@ -91,7 +91,7 @@
                                 </textFieldCell>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Xrm-mG-dNM">
-                                <rect key="frame" x="218" y="157" width="115" height="40"/>
+                                <rect key="frame" x="218" y="146" width="115" height="40"/>
                                 <subviews>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yU5-8A-dzR">
                                         <rect key="frame" x="-2" y="0.0" width="35" height="40"/>
@@ -125,15 +125,15 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="K8l-iS-3yb">
-                                <rect key="frame" x="26" y="91" width="498" height="56"/>
+                                <rect key="frame" x="100" y="76" width="350" height="60"/>
                                 <buttonCell key="cell" type="bevel" title="Continue" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="5zr-dv-a7n">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="22"/>
                                 </buttonCell>
                                 <color key="contentTintColor" name="AppWhiteOnly"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="Tiw-5t-77C"/>
-                                    <constraint firstAttribute="width" constant="498" id="kaq-CP-TAl"/>
+                                    <constraint firstAttribute="height" constant="60" id="Tiw-5t-77C"/>
+                                    <constraint firstAttribute="width" constant="350" id="kaq-CP-TAl"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -148,7 +148,7 @@
                                 </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-sY-bj8">
-                                <rect key="frame" x="172" y="65" width="206" height="16"/>
+                                <rect key="frame" x="172" y="50" width="206" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Auto renewable, cancel anytime" id="byt-hd-TsU">
                                     <font key="font" metaFont="systemMedium" size="13"/>
                                     <color key="textColor" name="Black6"/>
@@ -156,7 +156,7 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZE-v9-mhS">
-                                <rect key="frame" x="92" y="25" width="367" height="25"/>
+                                <rect key="frame" x="92" y="10" width="367" height="25"/>
                                 <subviews>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="hEg-bV-Fng">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
@@ -288,7 +288,7 @@
                             <constraint firstItem="ojE-OP-2QW" firstAttribute="top" secondItem="AJo-2q-Mbf" secondAttribute="top" constant="20" id="6Jt-gT-Pjp"/>
                             <constraint firstItem="wZj-6V-3RT" firstAttribute="centerX" secondItem="AJo-2q-Mbf" secondAttribute="centerX" id="B5f-5h-ann"/>
                             <constraint firstItem="fqQ-rl-MFA" firstAttribute="top" secondItem="AJo-2q-Mbf" secondAttribute="top" constant="20" id="Eyb-dg-roJ"/>
-                            <constraint firstAttribute="bottom" secondItem="aZE-v9-mhS" secondAttribute="bottom" constant="25" id="Igi-vv-hIe"/>
+                            <constraint firstAttribute="bottom" secondItem="aZE-v9-mhS" secondAttribute="bottom" constant="10" id="Igi-vv-hIe"/>
                             <constraint firstItem="aZE-v9-mhS" firstAttribute="centerX" secondItem="AJo-2q-Mbf" secondAttribute="centerX" id="R03-h3-kgx"/>
                             <constraint firstItem="fyN-g2-n0D" firstAttribute="centerX" secondItem="AJo-2q-Mbf" secondAttribute="centerX" id="RbF-qs-5dT"/>
                             <constraint firstItem="XKm-sY-bj8" firstAttribute="top" secondItem="K8l-iS-3yb" secondAttribute="bottom" constant="10" id="SAp-84-sus"/>

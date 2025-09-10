@@ -143,6 +143,7 @@ extension ProPaymentVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCo
                     cell.imgRadio.image = NSImage(resource: ImageResource.imgRadioSelected)
                     cell.viewContainer.borderColor = NSColor.primary1
                     cell.viewContainer.borderWidth = 2
+                    cell.viewContainer.fillColor = .primary2
                     if product.introductoryPrice != nil {
                         //will use later
                         self.btnContinue.title = "Start For Free"
@@ -157,6 +158,7 @@ extension ProPaymentVC: NSCollectionViewDelegate,NSCollectionViewDataSource,NSCo
                     cell.imgRadio.image = NSImage(resource: ImageResource.imgRadio)
                     cell.viewContainer.borderColor = NSColor.white3
                     cell.viewContainer.borderWidth = 1
+                    cell.viewContainer.fillColor = .white1
                 }
             }
         }

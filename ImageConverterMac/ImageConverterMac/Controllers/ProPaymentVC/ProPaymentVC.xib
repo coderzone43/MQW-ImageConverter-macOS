@@ -337,7 +337,7 @@
                                             <color key="fillColor" name="White2"/>
                                         </box>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="coE-UD-f9O">
-                                            <rect key="frame" x="130" y="157" width="289" height="19"/>
+                                            <rect key="frame" x="130" y="141" width="289" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="3 Days Free Trial, then $45.99 per month" id="gwV-bT-vQm">
                                                 <font key="font" metaFont="system" size="15"/>
                                                 <color key="textColor" name="Black6"/>
@@ -345,15 +345,15 @@
                                             </textFieldCell>
                                         </textField>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="vsc-iZ-WqC">
-                                            <rect key="frame" x="25" y="91" width="498" height="56"/>
+                                            <rect key="frame" x="99" y="71" width="350" height="60"/>
                                             <buttonCell key="cell" type="bevel" title="Start For Free" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="LMT-j3-dux">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="systemBold" size="22"/>
                                             </buttonCell>
                                             <color key="contentTintColor" name="AppWhiteOnly"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="56" id="dHt-YY-VKH"/>
-                                                <constraint firstAttribute="width" constant="498" id="rKh-hX-iaH"/>
+                                                <constraint firstAttribute="height" constant="60" id="dHt-YY-VKH"/>
+                                                <constraint firstAttribute="width" constant="350" id="rKh-hX-iaH"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -368,7 +368,7 @@
                                             </connections>
                                         </button>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lcb-li-N9g">
-                                            <rect key="frame" x="171" y="60" width="206" height="16"/>
+                                            <rect key="frame" x="171" y="50" width="206" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Auto renewable, cancel anytime" id="pS0-2e-8zr">
                                                 <font key="font" metaFont="systemMedium" size="13"/>
                                                 <color key="textColor" name="Black6"/>
@@ -376,7 +376,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htp-uy-TId">
-                                            <rect key="frame" x="25" y="20" width="498" height="25"/>
+                                            <rect key="frame" x="25" y="10" width="498" height="25"/>
                                             <subviews>
                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="lcG-Dv-Wx3">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
@@ -557,7 +557,7 @@
                                         <constraint firstItem="p2c-5D-fQh" firstAttribute="top" secondItem="LoY-X7-suy" secondAttribute="bottom" constant="20" id="6vY-yR-rfA"/>
                                         <constraint firstItem="vsc-iZ-WqC" firstAttribute="top" secondItem="coE-UD-f9O" secondAttribute="bottom" constant="10" id="6zG-wG-XVo"/>
                                         <constraint firstItem="1QS-Hb-bD4" firstAttribute="top" secondItem="QOM-aI-t4F" secondAttribute="bottom" constant="15" id="Bpf-fG-AYm"/>
-                                        <constraint firstAttribute="bottom" secondItem="htp-uy-TId" secondAttribute="bottom" constant="20" id="QKM-1g-fK6"/>
+                                        <constraint firstAttribute="bottom" secondItem="htp-uy-TId" secondAttribute="bottom" constant="10" id="QKM-1g-fK6"/>
                                         <constraint firstItem="X1p-iv-kdT" firstAttribute="top" secondItem="KFm-hF-75z" secondAttribute="top" constant="20" id="Soh-a1-8r9"/>
                                         <constraint firstItem="LoY-X7-suy" firstAttribute="leading" secondItem="p2c-5D-fQh" secondAttribute="leading" id="Wji-gV-6bK"/>
                                         <constraint firstItem="QOM-aI-t4F" firstAttribute="centerY" secondItem="C74-Nx-5GE" secondAttribute="centerY" id="YqT-Mw-BHX"/>
@@ -569,7 +569,7 @@
                                         <constraint firstItem="C74-Nx-5GE" firstAttribute="leading" secondItem="QOM-aI-t4F" secondAttribute="trailing" constant="10" id="nzA-l1-Uxz"/>
                                         <constraint firstItem="QOM-aI-t4F" firstAttribute="top" secondItem="KFm-hF-75z" secondAttribute="top" constant="25" id="pgu-4Q-XsO"/>
                                         <constraint firstItem="LoY-X7-suy" firstAttribute="top" secondItem="1QS-Hb-bD4" secondAttribute="bottom" constant="20" id="qCZ-QM-0bl"/>
-                                        <constraint firstItem="lcb-li-N9g" firstAttribute="top" secondItem="vsc-iZ-WqC" secondAttribute="bottom" constant="15" id="t00-TH-ONp"/>
+                                        <constraint firstItem="lcb-li-N9g" firstAttribute="top" secondItem="vsc-iZ-WqC" secondAttribute="bottom" constant="5" id="t00-TH-ONp"/>
                                         <constraint firstAttribute="trailing" secondItem="X1p-iv-kdT" secondAttribute="trailing" constant="20" id="wv2-G6-rK0"/>
                                         <constraint firstItem="LoY-X7-suy" firstAttribute="leading" secondItem="KFm-hF-75z" secondAttribute="leading" constant="25" id="ysT-eB-O1j"/>
                                     </constraints>
